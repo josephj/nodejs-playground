@@ -1,20 +1,20 @@
 var express = require('express');
 var app = express();
-var Sequelize = require('sequelize');
-var sequelize = new Sequelize('postgres://josephj@localhost:5432/playground');
-sequelize
-  .authenticate()
-    .then(function(err) {
-            console.log('Connection has been established successfully.');
 
-    })
-.catch(function (err) {
-        console.log('Unable to connect to the database:', err);
-
+var knex = require('knex')({
+  client: 'pg',
+  connection: {
+    host : 'localhost',
+    user : 'josephj',
+    database : 'playground_development'
+  }
 });
 
+
 app.get('/', function (req, res) {
-  res.send('Hello World 2!');
+	knex.select('*').from('users').then(function (users) {
+		res.send(users[0].name);
+	});
 });
 
 app.get('/welcome', function (req, res) {
