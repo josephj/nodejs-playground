@@ -184,7 +184,7 @@ async-listener@^0.6.0:
   dependencies:
     shimmer "1.0.0"
 
-async@1.5, async@^1.3.0, async@^1.5:
+async@1.5, async@^1.3.0, async@^1.5, async@^1.5.0:
   version "1.5.2"
   resolved async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a
 
@@ -424,6 +424,10 @@ babel-plugin-syntax-decorators@^6.13.0:
   version "6.13.0"
   resolved babel-plugin-syntax-decorators-6.13.0.tgz#312563b4dbde3cc806cee3e416cceeaddd11ac0b
 
+babel-plugin-syntax-do-expressions@^6.8.0:
+  version "6.13.0"
+  resolved babel-plugin-syntax-do-expressions-6.13.0.tgz#5747756139aa26d390d09410b03744ba07e4796d
+
 babel-plugin-syntax-dynamic-import@^6.18.0:
   version "6.18.0"
   resolved babel-plugin-syntax-dynamic-import-6.18.0.tgz#8d6a26229c83745a9982a441051572caa179b1da
@@ -439,6 +443,10 @@ babel-plugin-syntax-export-extensions@^6.8.0:
 babel-plugin-syntax-flow@^6.18.0, babel-plugin-syntax-flow@^6.3.13:
   version "6.18.0"
   resolved babel-plugin-syntax-flow-6.18.0.tgz#4c3ab20a2af26aa20cd25995c398c4eb70310c8d
+
+babel-plugin-syntax-function-bind@^6.8.0:
+  version "6.13.0"
+  resolved babel-plugin-syntax-function-bind-6.13.0.tgz#48c495f177bdf31a981e732f55adc0bdd2601f46
 
 babel-plugin-syntax-jsx@^6.3.13, babel-plugin-syntax-jsx@^6.8.0:
   version "6.18.0"
@@ -494,6 +502,13 @@ babel-plugin-transform-decorators@^6.22.0:
     babel-runtime "^6.22.0"
     babel-template "^6.22.0"
     babel-types "^6.22.0"
+
+babel-plugin-transform-do-expressions@^6.22.0:
+  version "6.22.0"
+  resolved babel-plugin-transform-do-expressions-6.22.0.tgz#28ccaf92812d949c2cd1281f690c8fdc468ae9bb
+  dependencies:
+    babel-plugin-syntax-do-expressions "^6.8.0"
+    babel-runtime "^6.22.0"
 
 babel-plugin-transform-es2015-arrow-functions@^6.22.0, babel-plugin-transform-es2015-arrow-functions@^6.3.13:
   version "6.22.0"
@@ -685,6 +700,13 @@ babel-plugin-transform-flow-strip-types@^6.22.0:
     babel-plugin-syntax-flow "^6.18.0"
     babel-runtime "^6.22.0"
 
+babel-plugin-transform-function-bind@^6.22.0:
+  version "6.22.0"
+  resolved babel-plugin-transform-function-bind-6.22.0.tgz#c6fb8e96ac296a310b8cf8ea401462407ddf6a97
+  dependencies:
+    babel-plugin-syntax-function-bind "^6.8.0"
+    babel-runtime "^6.22.0"
+
 babel-plugin-transform-object-rest-spread@^6.22.0:
   version "6.22.0"
   resolved babel-plugin-transform-object-rest-spread-6.22.0.tgz#1d419b55e68d2e4f64a5ff3373bd67d73c8e83bc
@@ -806,6 +828,14 @@ babel-preset-react@^6.22.0:
     babel-plugin-transform-react-jsx "^6.22.0"
     babel-plugin-transform-react-jsx-self "^6.22.0"
     babel-plugin-transform-react-jsx-source "^6.22.0"
+
+babel-preset-stage-0@^6.22.0:
+  version "6.22.0"
+  resolved babel-preset-stage-0-6.22.0.tgz#707eeb5b415da769eff9c42f4547f644f9296ef9
+  dependencies:
+    babel-plugin-transform-do-expressions "^6.22.0"
+    babel-plugin-transform-function-bind "^6.22.0"
+    babel-preset-stage-1 "^6.22.0"
 
 babel-preset-stage-1@^6.22.0:
   version "6.22.0"
@@ -1103,7 +1133,7 @@ charm@~0.1.1:
   version "0.1.2"
   resolved charm-0.1.2.tgz#06c21eed1a1b06aeb67553cdc53e23274bac2296
 
-chokidar@^1.0.0, chokidar@^1.6.1:
+chokidar@^1.0.0, chokidar@^1.4.3, chokidar@^1.6.1:
   version "1.6.1"
   resolved chokidar-1.6.1.tgz#2f4447ab5e96e50fb3d789fd90d4c72e0e4c70c2
   dependencies:
@@ -1259,6 +1289,19 @@ config-chain@~1.1.5:
   dependencies:
     ini "^1.3.4"
     proto-list "~1.2.1"
+
+configstore@^1.0.0:
+  version "1.4.0"
+  resolved configstore-1.4.0.tgz#c35781d0501d268c25c54b8b17f6240e8a4fb021
+  dependencies:
+    graceful-fs "^4.1.2"
+    mkdirp "^0.5.0"
+    object-assign "^4.0.1"
+    os-tmpdir "^1.0.0"
+    osenv "^0.1.0"
+    uuid "^2.0.1"
+    write-file-atomic "^1.1.2"
+    xdg-basedir "^2.0.0"
 
 connect-ensure-login@^0.1.1:
   version "0.1.1"
@@ -1499,6 +1542,19 @@ duplexer2@0.0.2:
   dependencies:
     readable-stream "~1.1.9"
 
+duplexer@~0.1.1:
+  version "0.1.1"
+  resolved duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1
+
+duplexify@^3.2.0:
+  version "3.5.0"
+  resolved duplexify-3.5.0.tgz#1aa773002e1578457e9d9d4a50b0ccaaebcbd604
+  dependencies:
+    end-of-stream "1.0.0"
+    inherits "^2.0.1"
+    readable-stream "^2.0.0"
+    stream-shift "^1.0.0"
+
 ecc-jsbn@~0.1.1:
   version "0.1.1"
   resolved ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505
@@ -1545,6 +1601,12 @@ encoding@^0.1.11:
   resolved encoding-0.1.12.tgz#538b66f3ee62cd1ab51ec323829d1f9480c74beb
   dependencies:
     iconv-lite "~0.4.13"
+
+end-of-stream@1.0.0:
+  version "1.0.0"
+  resolved end-of-stream-1.0.0.tgz#d4596e702734a93e40e9af864319eabd99ff2f0e
+  dependencies:
+    once "~1.3.0"
 
 end-of-stream@~0.1.5:
   version "0.1.5"
@@ -1611,6 +1673,10 @@ es6-map@^0.1.3:
     es6-set "~0.1.3"
     es6-symbol "~3.1.0"
     event-emitter "~0.3.4"
+
+es6-promise@^3.0.2:
+  version "3.3.1"
+  resolved es6-promise-3.3.1.tgz#a08cdde84ccdbf34d027a1451bc91d4bcd28a613
 
 es6-set@~0.1.3:
   version "0.1.4"
@@ -1759,6 +1825,18 @@ event-emitter@~0.3.4:
     d "~0.1.1"
     es5-ext "~0.10.7"
 
+event-stream@~3.3.0:
+  version "3.3.4"
+  resolved event-stream-3.3.4.tgz#4ab4c9a0f5a54db9338b4c34d86bfce8f4b35571
+  dependencies:
+    duplexer "~0.1.1"
+    from "~0"
+    map-stream "~0.1.0"
+    pause-stream "0.0.11"
+    split "0.3"
+    stream-combiner "~0.0.4"
+    through "~2.3.1"
+
 eventemitter2@1.0.5:
   version "1.0.5"
   resolved eventemitter2-1.0.5.tgz#f983610517b1737c0b9dc643beca93893c04df18
@@ -1857,6 +1935,14 @@ extglob@^0.3.1:
   resolved extglob-0.3.2.tgz#2e18ff3d2f49ab2765cec9023f011daa8d8349a1
   dependencies:
     is-extglob "^1.0.0"
+
+extract-text-webpack-plugin@^1.0.1:
+  version "1.0.1"
+  resolved extract-text-webpack-plugin-1.0.1.tgz#c95bf3cbaac49dc96f1dc6e072549fbb654ccd2c
+  dependencies:
+    async "^1.5.0"
+    loader-utils "^0.2.3"
+    webpack-sources "^0.1.0"
 
 extsprintf@1.0.2:
   version "1.0.2"
@@ -2029,6 +2115,10 @@ forwarded@~0.1.0:
 fresh@0.3.0:
   version "0.3.0"
   resolved fresh-0.3.0.tgz#651f838e22424e7566de161d8358caa199f83d4f
+
+from@~0:
+  version "0.1.3"
+  resolved from-0.1.3.tgz#ef63ac2062ac32acf7862e0d40b44b896f22f3bc
 
 fs-exists-sync@^0.1.0:
   version "0.1.0"
@@ -2244,13 +2334,28 @@ glogg@^1.0.0:
   dependencies:
     sparkles "^1.0.0"
 
+got@^3.2.0:
+  version "3.3.1"
+  resolved got-3.3.1.tgz#e5d0ed4af55fc3eef4d56007769d98192bcb2eca
+  dependencies:
+    duplexify "^3.2.0"
+    infinity-agent "^2.0.0"
+    is-redirect "^1.0.0"
+    is-stream "^1.0.0"
+    lowercase-keys "^1.0.0"
+    nested-error-stacks "^1.0.0"
+    object-assign "^3.0.0"
+    prepend-http "^1.0.0"
+    read-all-stream "^3.0.0"
+    timed-out "^2.0.0"
+
 graceful-fs@^3.0.0:
   version "3.0.11"
   resolved graceful-fs-3.0.11.tgz#7613c778a1afea62f25c630a086d7f3acbbdd818
   dependencies:
     natives "^1.1.0"
 
-graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
+graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.11"
   resolved graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658
 
@@ -2457,6 +2562,10 @@ ieee754@^1.1.4:
   version "1.1.8"
   resolved ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4
 
+ignore-by-default@^1.0.0:
+  version "1.0.1"
+  resolved ignore-by-default-1.0.1.tgz#48ca6d72f6c6a3af00a9ad4ae6876be3889e2b09
+
 ignore@^3.2.0:
   version "3.2.2"
   resolved ignore-3.2.2.tgz#1c51e1ef53bab6ddc15db4d9ac4ec139eceb3410
@@ -2468,6 +2577,10 @@ imurmurhash@^0.1.4:
 indexof@0.0.1:
   version "0.0.1"
   resolved indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d
+
+infinity-agent@^2.0.0:
+  version "2.0.3"
+  resolved infinity-agent-2.0.3.tgz#45e0e2ff7a9eb030b27d62b74b3744b7a7ac4216
 
 inflection@^1.6.0:
   version "1.10.0"
@@ -2615,6 +2728,10 @@ is-my-json-valid@^2.10.0, is-my-json-valid@^2.12.4:
     jsonpointer "^4.0.0"
     xtend "^4.0.0"
 
+is-npm@^1.0.0:
+  version "1.0.0"
+  resolved is-npm-1.0.0.tgz#f2fb63a65e4905b406c86072765a1a4dc793b9f4
+
 is-number@^2.0.2, is-number@^2.1.0:
   version "2.1.0"
   resolved is-number-2.1.0.tgz#01fcbbb393463a548f2f466cce16dece49db908f
@@ -2649,13 +2766,17 @@ is-property@^1.0.0:
   version "1.0.2"
   resolved is-property-1.0.2.tgz#57fe1c4e48474edd65b09911f26b1cd4095dda84
 
+is-redirect@^1.0.0:
+  version "1.0.0"
+  resolved is-redirect-1.0.0.tgz#1d03dded53bd8db0f30c26e4f95d36fc7c87dc24
+
 is-resolvable@^1.0.0:
   version "1.0.0"
   resolved is-resolvable-1.0.0.tgz#8df57c61ea2e3c501408d100fb013cf8d6e0cc62
   dependencies:
     tryit "^1.0.1"
 
-is-stream@^1.0.1:
+is-stream@^1.0.0, is-stream@^1.0.1:
   version "1.1.0"
   resolved is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44
 
@@ -2816,6 +2937,12 @@ knex@^0.12.6:
     tildify "~1.0.0"
     v8flags "^2.0.2"
 
+latest-version@^1.0.0:
+  version "1.0.1"
+  resolved latest-version-1.0.1.tgz#72cfc46e3e8d1be651e1ebb54ea9f6ea96f374bb
+  dependencies:
+    package-json "^1.0.0"
+
 lazy-cache@^1.0.3:
   version "1.0.4"
   resolved lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e
@@ -2857,7 +2984,7 @@ load-json-file@^1.0.0:
     pinkie-promise "^2.0.0"
     strip-bom "^2.0.0"
 
-loader-utils@^0.2.11:
+loader-utils@^0.2.11, loader-utils@^0.2.3:
   version "0.2.16"
   resolved loader-utils-0.2.16.tgz#f08632066ed8282835dff88dfb52704765adee6d
   dependencies:
@@ -2916,6 +3043,14 @@ lodash._bindcallback@^3.0.0:
   version "3.0.1"
   resolved lodash._bindcallback-3.0.1.tgz#e531c27644cf8b57a99e17ed95b35c748789392e
 
+lodash._createassigner@^3.0.0:
+  version "3.1.1"
+  resolved lodash._createassigner-3.1.1.tgz#838a5bae2fdaca63ac22dee8e19fa4e6d6970b11
+  dependencies:
+    lodash._bindcallback "^3.0.0"
+    lodash._isiterateecall "^3.0.0"
+    lodash.restparam "^3.0.0"
+
 lodash._getnative@^3.0.0:
   version "3.9.1"
   resolved lodash._getnative-3.9.1.tgz#570bc7dede46d61cdcde687d65d3eecbaa3aaff5
@@ -2940,6 +3075,14 @@ lodash._root@^3.0.0:
   version "3.0.1"
   resolved lodash._root-3.0.1.tgz#fba1c4524c19ee9a5f8136b4609f017cf4ded692
 
+lodash.assign@^3.0.0:
+  version "3.2.0"
+  resolved lodash.assign-3.2.0.tgz#3ce9f0234b4b2223e296b8fa0ac1fee8ebca64fa
+  dependencies:
+    lodash._baseassign "^3.0.0"
+    lodash._createassigner "^3.0.0"
+    lodash.keys "^3.0.0"
+
 lodash.assign@^4.2.0:
   version "4.2.0"
   resolved lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7
@@ -2950,6 +3093,13 @@ lodash.clonedeep@^3.0.0:
   dependencies:
     lodash._baseclone "^3.0.0"
     lodash._bindcallback "^3.0.0"
+
+lodash.defaults@^3.1.2:
+  version "3.1.2"
+  resolved lodash.defaults-3.1.2.tgz#c7308b18dbf8bc9372d701a73493c61192bd2e2c
+  dependencies:
+    lodash.assign "^3.0.0"
+    lodash.restparam "^3.0.0"
 
 lodash.escape@^3.0.0:
   version "3.2.0"
@@ -3028,6 +3178,10 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.2.0:
   dependencies:
     js-tokens "^3.0.0"
 
+lowercase-keys@^1.0.0:
+  version "1.0.0"
+  resolved lowercase-keys-1.0.0.tgz#4e3366b39e7f5457e35f1324bdf6f88d0bfc7306
+
 lru-cache@2:
   version "2.7.3"
   resolved lru-cache-2.7.3.tgz#6d4524e8b955f95d4f5b58851ce21dd72fb4e952
@@ -3050,6 +3204,10 @@ lru-queue@0.1:
   resolved lru-queue-0.1.0.tgz#2738bd9f0d3cf4f84490c5736c48699ac632cda3
   dependencies:
     es5-ext "~0.10.2"
+
+map-stream@~0.1.0:
+  version "0.1.0"
+  resolved map-stream-0.1.0.tgz#e56aa94c4c8055a16404a0674b78f215f7c8e194
 
 marked-terminal@^1.6.2:
   version "1.7.0"
@@ -3250,6 +3408,12 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9
 
+nested-error-stacks@^1.0.0:
+  version "1.0.2"
+  resolved nested-error-stacks-1.0.2.tgz#19f619591519f096769a5ba9a86e6eeec823c3cf
+  dependencies:
+    inherits "~2.0.1"
+
 next-tick@~0.2.2:
   version "0.2.2"
   resolved next-tick-0.2.2.tgz#75da4a927ee5887e39065880065b7336413b310d
@@ -3333,6 +3497,27 @@ node-pre-gyp@^0.6.29:
 node-uuid@^1.4.7, node-uuid@~1.4.0, node-uuid@~1.4.4:
   version "1.4.7"
   resolved node-uuid-1.4.7.tgz#6da5a17668c4b3dd59623bda11cf7fa4c1f60a6f
+
+nodemon@^1.11.0:
+  version "1.11.0"
+  resolved nodemon-1.11.0.tgz#226c562bd2a7b13d3d7518b49ad4828a3623d06c
+  dependencies:
+    chokidar "^1.4.3"
+    debug "^2.2.0"
+    es6-promise "^3.0.2"
+    ignore-by-default "^1.0.0"
+    lodash.defaults "^3.1.2"
+    minimatch "^3.0.0"
+    ps-tree "^1.0.1"
+    touch "1.0.0"
+    undefsafe "0.0.3"
+    update-notifier "0.5.0"
+
+nopt@~1.0.10:
+  version "1.0.10"
+  resolved nopt-1.0.10.tgz#6ddd21bd2a31417b92727dd585f8a6f37608ebee
+  dependencies:
+    abbrev "1"
 
 nopt@~3.0.1, nopt@~3.0.6:
   version "3.0.6"
@@ -3480,9 +3665,23 @@ os-locale@^1.4.0:
   dependencies:
     lcid "^1.0.0"
 
-os-tmpdir@^1.0.1:
+os-tmpdir@^1.0.0, os-tmpdir@^1.0.1:
   version "1.0.2"
   resolved os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274
+
+osenv@^0.1.0:
+  version "0.1.4"
+  resolved osenv-0.1.4.tgz#42fe6d5953df06c8064be6f176c3d05aaaa34644
+  dependencies:
+    os-homedir "^1.0.0"
+    os-tmpdir "^1.0.0"
+
+package-json@^1.0.0:
+  version "1.2.0"
+  resolved package-json-1.2.0.tgz#c8ecac094227cdf76a316874ed05e27cc939a0e0
+  dependencies:
+    got "^3.2.0"
+    registry-url "^3.0.0"
 
 packet-reader@0.2.0:
   version "0.2.0"
@@ -3570,6 +3769,12 @@ path-type@^1.0.0:
     graceful-fs "^4.1.2"
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
+
+pause-stream@0.0.11:
+  version "0.0.11"
+  resolved pause-stream-0.0.11.tgz#fe5a34b0cbce12b5aa6a2b403ee2e73b602f1445
+  dependencies:
+    through "~2.3"
 
 pause@0.0.1:
   version "0.0.1"
@@ -3745,6 +3950,10 @@ prelude-ls@~1.1.2:
   version "1.1.2"
   resolved prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54
 
+prepend-http@^1.0.0:
+  version "1.0.4"
+  resolved prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc
+
 preserve@^0.2.0:
   version "0.2.0"
   resolved preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b
@@ -3793,6 +4002,12 @@ proxy-addr@~1.1.2:
 prr@~0.0.0:
   version "0.0.0"
   resolved prr-0.0.0.tgz#1a84b85908325501411853d0081ee3fa86e2926a
+
+ps-tree@^1.0.1:
+  version "1.1.0"
+  resolved ps-tree-1.1.0.tgz#b421b24140d6203f1ed3c76996b4427b08e8c014
+  dependencies:
+    event-stream "~3.3.0"
 
 pseudomap@^1.0.1:
   version "1.0.2"
@@ -3864,7 +4079,7 @@ raw-body@~2.2.0:
     iconv-lite "0.4.15"
     unpipe "1.0.0"
 
-rc@~1.1.6:
+rc@^1.0.1, rc@~1.1.6:
   version "1.1.6"
   resolved rc-1.1.6.tgz#43651b76b6ae53b5c802f1151fa3fc3b059969c9
   dependencies:
@@ -3922,6 +4137,10 @@ react-router@^3.0.2:
     loose-envify "^1.2.0"
     warning "^3.0.0"
 
+react-transform@^0.0.3:
+  version "0.0.3"
+  resolved react-transform-0.0.3.tgz#5e35900e35391ef2c2e0bab59951c1c59bdd6cd5
+
 react@^15.4.2:
   version "15.4.2"
   resolved react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef
@@ -3929,6 +4148,13 @@ react@^15.4.2:
     fbjs "^0.8.4"
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
+
+read-all-stream@^3.0.0:
+  version "3.1.0"
+  resolved read-all-stream-3.1.0.tgz#35c3e177f2078ef789ee4bfafa4373074eaef4fa
+  dependencies:
+    pinkie-promise "^2.0.0"
+    readable-stream "^2.0.0"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -3963,7 +4189,7 @@ readable-stream@^1.1.12, readable-stream@~1.1.9:
     isarray "0.0.1"
     string_decoder "~0.10.x"
 
-"readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.5, readable-stream@^2.1.0, readable-stream@^2.1.5, readable-stream@^2.2.2:
+readable-stream@^2.0.0, "readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.5, readable-stream@^2.1.0, readable-stream@^2.1.5, readable-stream@^2.2.2:
   version "2.2.2"
   resolved readable-stream-2.2.2.tgz#a9e6fec3c7dda85f8bb1b3ba7028604556fc825e
   dependencies:
@@ -4058,6 +4284,12 @@ regexpu-core@^2.0.0:
     regjsgen "^0.2.0"
     regjsparser "^0.1.4"
 
+registry-url@^3.0.0:
+  version "3.1.0"
+  resolved registry-url-3.1.0.tgz#3d4ef870f73dde1d77f0cf9a381432444e174942
+  dependencies:
+    rc "^1.0.1"
+
 regjsgen@^0.2.0:
   version "0.2.0"
   resolved regjsgen-0.2.0.tgz#6c016adeac554f75823fe37ac05b92d5a4edb1f7
@@ -4075,6 +4307,12 @@ repeat-element@^1.1.2:
 repeat-string@^1.5.2:
   version "1.6.1"
   resolved repeat-string-1.6.1.tgz#8dcae470e1c88abc2d600fff4a776286da75e637
+
+repeating@^1.1.2:
+  version "1.1.3"
+  resolved repeating-1.1.3.tgz#3d4114218877537494f97f77f9785fab810fa4ac
+  dependencies:
+    is-finite "^1.0.0"
 
 repeating@^2.0.0:
   version "2.0.1"
@@ -4207,7 +4445,13 @@ rx-lite@^3.1.2:
   version "3.1.2"
   resolved rx-lite-3.1.2.tgz#19ce502ca572665f3b647b10939f97fd1615f102
 
-"semver@2 || 3 || 4 || 5", semver@^5.0.1, semver@^5.1.0, semver@^5.2, semver@~5.3.0:
+semver-diff@^2.0.0:
+  version "2.1.0"
+  resolved semver-diff-2.1.0.tgz#4bbb8437c8d37e4b0cf1a68fd726ec6d645d6d36
+  dependencies:
+    semver "^5.0.3"
+
+"semver@2 || 3 || 4 || 5", semver@^5.0.1, semver@^5.0.3, semver@^5.1.0, semver@^5.2, semver@~5.3.0:
   version "5.3.0"
   resolved semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f
 
@@ -4370,6 +4614,10 @@ slice-ansi@0.0.4:
   version "0.0.4"
   resolved slice-ansi-0.0.4.tgz#edbf8903f66f7ce2f8eafd6ceed65e264c831b35
 
+slide@^1.1.5:
+  version "1.1.6"
+  resolved slide-1.1.6.tgz#56eb027d65b4d2dce6cb2e2d32c4d4afc9e1d707
+
 sntp@0.2.x:
   version "0.2.4"
   resolved sntp-0.2.4.tgz#fb885f18b0f3aad189f824862536bceeec750900
@@ -4416,7 +4664,7 @@ source-map@^0.4.4, source-map@~0.4.1:
   dependencies:
     amdefine ">=0.0.4"
 
-source-map@^0.5.0, source-map@^0.5.3, source-map@~0.5.1:
+source-map@^0.5.0, source-map@^0.5.3, source-map@~0.5.1, source-map@~0.5.3:
   version "0.5.6"
   resolved source-map-0.5.6.tgz#75ce38f52bf0733c5a7f0c118d81334a2bb5f412
 
@@ -4437,6 +4685,12 @@ spdx-expression-parse@~1.0.0:
 spdx-license-ids@^1.0.2:
   version "1.2.2"
   resolved spdx-license-ids-1.2.2.tgz#c9df7a3424594ade6bd11900d596696dc06bac57
+
+split@0.3:
+  version "0.3.3"
+  resolved split-0.3.3.tgz#cd0eea5e63a211dfff7eb0f091c4133e2d0dd28f
+  dependencies:
+    through "2"
 
 split@^1.0.0:
   version "1.0.0"
@@ -4482,6 +4736,12 @@ stream-cache@~0.0.1:
   version "0.0.2"
   resolved stream-cache-0.0.2.tgz#1ac5ad6832428ca55667dbdee395dad4e6db118f
 
+stream-combiner@~0.0.4:
+  version "0.0.4"
+  resolved stream-combiner-0.0.4.tgz#4d5e433c185261dde623ca3f44c586bcf5c4ad14
+  dependencies:
+    duplexer "~0.1.1"
+
 stream-consume@~0.1.0:
   version "0.1.0"
   resolved stream-consume-0.1.0.tgz#a41ead1a6d6081ceb79f65b061901b6d8f3d1d0f
@@ -4496,9 +4756,19 @@ stream-http@^2.3.1:
     to-arraybuffer "^1.0.0"
     xtend "^4.0.0"
 
+stream-shift@^1.0.0:
+  version "1.0.0"
+  resolved stream-shift-1.0.0.tgz#d5c752825e5367e786f78e18e445ea223a155952
+
 strict-uri-encode@^1.0.0:
   version "1.1.0"
   resolved strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713
+
+string-length@^1.0.0:
+  version "1.0.1"
+  resolved string-length-1.0.1.tgz#56970fb1c38558e9e70b728bf3de269ac45adfac
+  dependencies:
+    strip-ansi "^3.0.0"
 
 string-width@^1.0.1, string-width@^1.0.2:
   version "1.0.2"
@@ -4636,7 +4906,7 @@ through2@^2.0.0:
     readable-stream "^2.1.5"
     xtend "~4.0.1"
 
-through@2, through@^2.3.6:
+through@2, through@^2.3.6, through@~2.3, through@~2.3.1:
   version "2.3.8"
   resolved through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5
 
@@ -4649,6 +4919,10 @@ tildify@^1.0.0, tildify@~1.0.0:
 time-stamp@^1.0.0:
   version "1.0.1"
   resolved time-stamp-1.0.1.tgz#9f4bd23559c9365966f3302dbba2b07c6b99b151
+
+timed-out@^2.0.0:
+  version "2.0.0"
+  resolved timed-out-2.0.0.tgz#f38b0ae81d3747d628001f41dafc652ace671c0a
 
 timers-browserify@^2.0.2:
   version "2.0.2"
@@ -4674,6 +4948,12 @@ to-fast-properties@^1.0.1:
 toposort-class@^1.0.1:
   version "1.0.1"
   resolved toposort-class-1.0.1.tgz#7ffd1f78c8be28c3ba45cd4e1a3f5ee193bd9988
+
+touch@1.0.0:
+  version "1.0.0"
+  resolved touch-1.0.0.tgz#449cbe2dbae5a8c8038e30d71fa0ff464947c4de
+  dependencies:
+    nopt "~1.0.10"
 
 tough-cookie@>=0.12.0, tough-cookie@~2.3.0:
   version "2.3.2"
@@ -4760,6 +5040,10 @@ umzug@^1.9.1:
     redefine "^0.2.0"
     resolve "^1.0.0"
 
+undefsafe@0.0.3:
+  version "0.0.3"
+  resolved undefsafe-0.0.3.tgz#ecca3a03e56b9af17385baac812ac83b994a962f
+
 underscore@^1.7.0:
   version "1.8.3"
   resolved underscore-1.8.3.tgz#4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022
@@ -4780,6 +5064,18 @@ universal-webpack@^0.3.1:
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
   resolved unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec
+
+update-notifier@0.5.0:
+  version "0.5.0"
+  resolved update-notifier-0.5.0.tgz#07b5dc2066b3627ab3b4f530130f7eddda07a4cc
+  dependencies:
+    chalk "^1.0.0"
+    configstore "^1.0.0"
+    is-npm "^1.0.0"
+    latest-version "^1.0.0"
+    repeating "^1.1.2"
+    semver-diff "^2.0.0"
+    string-length "^1.0.0"
 
 url-parse@1.0.x:
   version "1.0.5"
@@ -4976,6 +5272,13 @@ webpack-notifier@^1.5.0:
     object-assign "^4.1.0"
     strip-ansi "^3.0.1"
 
+webpack-sources@^0.1.0:
+  version "0.1.4"
+  resolved webpack-sources-0.1.4.tgz#ccc2c817e08e5fa393239412690bb481821393cd
+  dependencies:
+    source-list-map "~0.1.7"
+    source-map "~0.5.3"
+
 webpack@1.14.0:
   version "1.14.0"
   resolved webpack-1.14.0.tgz#54f1ffb92051a328a5b2057d6ae33c289462c823
@@ -5057,11 +5360,25 @@ wrappy@1:
   version "1.0.2"
   resolved wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f
 
+write-file-atomic@^1.1.2:
+  version "1.3.1"
+  resolved write-file-atomic-1.3.1.tgz#7d45ba32316328dd1ec7d90f60ebc0d845bb759a
+  dependencies:
+    graceful-fs "^4.1.11"
+    imurmurhash "^0.1.4"
+    slide "^1.1.5"
+
 write@^0.2.1:
   version "0.2.1"
   resolved write-0.2.1.tgz#5fc03828e264cea3fe91455476f7a3c566cb0757
   dependencies:
     mkdirp "^0.5.1"
+
+xdg-basedir@^2.0.0:
+  version "2.0.0"
+  resolved xdg-basedir-2.0.0.tgz#edbc903cc385fc04523d966a335504b5504d1bd2
+  dependencies:
+    os-homedir "^1.0.0"
 
 "xtend@>=4.0.0 <4.1.0-0", xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.1"

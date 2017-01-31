@@ -46,7 +46,7 @@ app.use(passport.session());
 
 app.get('/', function (req, res) {
   knex.select('*').from('users').then(function (users) {
-    res.send(users[0].name);
+    res.render('home', {user: users[0].name});
   });
 });
 
